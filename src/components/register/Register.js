@@ -16,13 +16,13 @@ export const Register = () => {
         const name = event.target.name;
         const value = event.target.value;
         setFormData((values) => ({ ...values, [name]: value }));
-      };
+    };
     
-      const handleSubmit = async (event) => {
-        event.preventDefault();
-        const response = await sendClientApi();
-        console.log(`response`, response);
-      };
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+      const response = await sendClientApi();
+      console.log(`response`, response);
+    };
     
       const sendClientApi = async () => {
         const requestData = {

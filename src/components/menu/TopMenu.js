@@ -46,23 +46,21 @@ export const TopMenu = () =>{
             <Link to="/">Inicio</Link>
             <div className="subnav">
                 <button className="subnavbtn">
-                    Generos <i className="fa fa-caret-down"></i>
+                    <Link to="/movie/gender/"> Generos </Link>
                 </button>
-                <div className="subnav-content">
+                {/*<div className="subnav-content">
                     {datosgender.map((item, idx) => (
                         <Link key={idx} to={`/gender/${item.name}`}>
                         {item.name}
                         </Link>
                     ))}
-                </div>
+                    </div>*/}
             </div>
         <div className="subnav">
             <button className="subnavbtn">
-            Mis Peliculas <i className="fa fa-caret-down"></i>
+                <Link to="/entermovie/"> Mis Peliculas </Link>
             </button>
-            <div className="subnav-content">
             
-            </div>
         </div>
             <Link to="">{renderLogout()}</Link>
         </div>
@@ -77,7 +75,7 @@ export const TopMenu = () =>{
         if (localStorage.getItem("authData")) {
           return <a onClick={logOut}>Cerrar sesión</a>;
         }
-      };
+    };
 
     const bootstrapMenu = () =>{
         <Navbar bg="light" expand="lg">
@@ -88,13 +86,16 @@ export const TopMenu = () =>{
                         <Nav.Link href="#home">
                             <Link to="/">Inicio</Link>
                         </Nav.Link>
-                        <NavDropdown title="Generos" id="basic-nav-dropdown">
+                        {/*<NavDropdown title="Generos" id="basic-nav-dropdown">
                         {datosgender.map((item, idx) => (
                         <Link key={idx} to={`/gender/${item.name}`}>
                         {item.name}
                         </Link>
                         ))}
-                        </NavDropdown>
+                        </NavDropdown>*/}
+                        <Nav.Link>
+                            <Link to={`/gender/`}>Generos</Link>
+                        </Nav.Link>
                         <Nav.Link>
                             <Link to={`/category/`}>Más vistas</Link>
                         </Nav.Link>
