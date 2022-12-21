@@ -158,7 +158,7 @@ export const Movie =()=>{
                 ))
                : "No hay generos definidas"}
 
-                  
+               
             
 
           
