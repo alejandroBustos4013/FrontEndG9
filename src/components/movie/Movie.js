@@ -29,6 +29,7 @@ export const Movie =()=>{
         let response = await fetch(API_URL + "movie/" +params.id);
         response = await response.json();
         setMovie(response);
+        console.log(response);
     };
 
     const checkScore = async () => {
@@ -149,14 +150,18 @@ export const Movie =()=>{
           </div>
           <div className="gender-list">
             
-            {movie.genders && movie.genders.length > 0
-              ? movie.genders.map((gender, idx) => (
+            {movie.genders && movie.genders.length > 0 ?
+               movie.genders.map((gender, idx) => (
                   <p key={idx}>
                     Genero: {gender.name} 
                   </p>
                 ))
-              : "No hay generos definidas"}
-              
+               : "No hay generos definidas"}
+
+                  
+            
+
+          
           </div>
           <div className="rate">
             <p>Calificar pelicula</p>

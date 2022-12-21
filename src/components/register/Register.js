@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { API_URL,getToken } from "../../util/Util";
 
 export const Register = () => {
     const [formData, setFormData] = useState({
@@ -32,7 +33,7 @@ export const Register = () => {
             "Content-type": "application/json",
           },
         };
-        let response = await fetch("http://localhost:8080/api/user", requestData);
+        let response = await fetch(API_URL+"user/", requestData);
         response = await response.json();
         return response;
       };

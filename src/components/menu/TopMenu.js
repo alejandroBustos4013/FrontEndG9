@@ -48,13 +48,6 @@ export const TopMenu = () =>{
                 <button className="subnavbtn">
                     <Link to="/movie/gender/"> Generos </Link>
                 </button>
-                {/*<div className="subnav-content">
-                    {datosgender.map((item, idx) => (
-                        <Link key={idx} to={`/gender/${item.name}`}>
-                        {item.name}
-                        </Link>
-                    ))}
-                    </div>*/}
             </div>
         <div className="subnav">
             <button className="subnavbtn">

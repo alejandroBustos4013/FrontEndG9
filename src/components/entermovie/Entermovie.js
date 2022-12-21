@@ -59,9 +59,6 @@ export const Entermovie =() =>{
         response = await response.json();
         return response;
         console.log(response);
-
-
-
       };
 
 
